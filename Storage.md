@@ -189,8 +189,25 @@ bucket policy:
 
 
 **TAKING SNAPSHOTS OF EBS**  
+  
+- Go to your volume -> click your volume -> actions -> create snapshot
+          <img width="1920" height="888" alt="image" src="https://github.com/user-attachments/assets/f1d07f14-1140-47b6-9b4a-a38a4198847b" />
 
-- 
+- Go to snapshots and u can see the snapshot:
+          <img width="1562" height="268" alt="image" src="https://github.com/user-attachments/assets/eea858a6-dc09-4089-8cdc-5f6317157030" />
+
+
+**CREATING EBS VOLUME FROM THAT SNAPSHOT**
+
+- Go to snapshots -> select your snapshot -> actions -> create volume from snapshot
+         <img width="1913" height="872" alt="image" src="https://github.com/user-attachments/assets/f2814139-86d2-4b3a-9c29-e9137736308d" />
+
+- Volume from snapshot is created now:
+         <img width="1556" height="301" alt="image" src="https://github.com/user-attachments/assets/2645ebb6-ab87-4592-9e21-22ee4050cb49" />
+
+
+
+
 
 
 
