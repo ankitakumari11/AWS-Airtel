@@ -1,3 +1,33 @@
+# S3- BUCKET
+
+**Versioning:** 
+1.Go to your bucket -> Properties ->edit bucket versioning -> enable.
+2.Now make changes locally in your laptop and in the file which u uploaded earlier and upload again.
+3.Now inside your bucket (check mark : "show versions") and now u will see multiple versions of your file.  
+
+## LIFE-CYCLE RULE:
+
+1.go to bucket->your bucket->management->lifecyle rules->create lifecycle rule->rule name (ankita-lifecycle) -> choose a rule scope ->apply to all objects in the bucket ->give prefix (Anything)
+2. inside lifecyle rule actions->check [ Transition current versions of objects between storage classes], similairly add other 
+```
+note : minimum of 30 days required for Standard IA.
+One Zone-IA: standard +30
+Galcier flexible retreival : one zone +30
+glacier deep archive: Galcier flexible retreival + 90
+
+Day 0
+Objects uploaded
+Day 30
+Objects move to Standard-IA
+Day 60
+Objects move to One Zone-IA
+Day 90
+Objects move to Glacier Flexible Retrieval (formerly Glacier)
+Day 180
+Objects move to Glacier Deep Archive
+```
+
+
 ## BUCKET -POLICY:
 
 GO TO bucket ->your bucket -> permissions ->bucket policy -> edit bucket policy -> add:  
