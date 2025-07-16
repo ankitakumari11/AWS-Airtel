@@ -141,7 +141,9 @@ bucket policy:
 > - *To summarize, ebs is a powerful storage solution for ec2. Select the right volume type for performance and cost baalance. Dont forget to setup snapshots and monitor performance using cloudwatch.For critical workloads , use io2 volumes with high durability and performance.*
 > - - *ssd has more speed and more capacity as compare to hdd*
 
-**HANDS-ON EBS**
+### HANDS-ON EBS
+
+**CREATING VOLUME AND MOUNTING**
 
 1. Create an instance and see the Avalaibility zone of the server
 2. Go to volumes and Create volume. Here select the same zone in which the ec2 is there and keep everything default i.e gp3.
@@ -176,7 +178,21 @@ bucket policy:
               
 - `ls -lart /myebsvol/` : is used to list the files and directories inside the /myebsvol/ directory in long format, including hidden files, sorted by modification time, with the newest files at the bottom.  
 - `df -h`
-            <img width="1920" height="406" alt="image" src="https://github.com/user-attachments/assets/5b991c2d-7e43-4722-85f6-47478197c95b" />
+            <img width="1920" height="406" alt="image" src="https://github.com/user-attachments/assets/8f30ff27-4902-4c5a-94c0-3077c5056f21" />
+
+
+**RESIZING EBS VOLUME**
+
+- You can't reduce the volume , you can delete it directly.
+- Go to your ebs volume -> modify -> increase size from 100 to 105.
+        <img width="1551" height="318" alt="image" src="https://github.com/user-attachments/assets/e7bf7d32-ddfe-40d4-a0e2-2a8c46093e23" />
+
+
+**TAKING SNAPSHOTS OF EBS**  
+
+- 
+
+
 
 
 
