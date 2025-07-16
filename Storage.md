@@ -156,21 +156,25 @@ bucket policy:
 6. Now u can see on the server , a new volume is attached :
            <img width="1886" height="314" alt="image" src="https://github.com/user-attachments/assets/697d728a-6d00-4f9f-a621-87ae709122ee" />
 7. Mounting the volume
-- `sudo fdisk -l`
+- `sudo fdisk -l` : The sudo fdisk -l command is used on Linux systems to list all available disk partitions and details about each connected storage device.  
             <img width="1920" height="720" alt="image" src="https://github.com/user-attachments/assets/380f5f98-11f3-421e-8593-70375a595c75" />
 
   <img width="1070" height="587" alt="image" src="https://github.com/user-attachments/assets/3cdba0c5-16a1-4f17-9e9c-f7757de0b994" />
 
-- `file -s /dev/xvdg`
+- `file -s /dev/xvdg`: It is used to identify the type of data or filesystem on the block device /dev/xvdg.
             <img width="1917" height="91" alt="image" src="https://github.com/user-attachments/assets/8895341a-5aee-43e1-9ef0-47553a943981" />
-- `mkfs -t xfs /dev/xvdg`
+              
+- `mkfs -t xfs /dev/xvdg` : is used to format the disk /dev/xvdg with the XFS filesystem.  
             <img width="1917" height="309" alt="image" src="https://github.com/user-attachments/assets/84550784-3c9a-4164-9301-afe245ba5af4" />
-- `file -s /dev/xvdg`
+              
+- `file -s /dev/xvdg` : This indicates that /dev/xvdg now has a valid XFS filesystem, and it's ready to be mounted.This tells Linux to inspect the contents of the block device /dev/xvdg and identify what kind of data or filesystem is on it.
             <img width="1920" height="82" alt="image" src="https://github.com/user-attachments/assets/bc2d16b1-c849-4912-9779-9abee12a23d7" />
+              
 - `mkdir /myebsvol`
 - `mount /dev/xvdg /myebsvol`
             <img width="1920" height="369" alt="image" src="https://github.com/user-attachments/assets/31896909-ee86-43e3-aca9-5d3d0144802e" />
-- `ls -lart /myebsvol/`
+              
+- `ls -lart /myebsvol/` : is used to list the files and directories inside the /myebsvol/ directory in long format, including hidden files, sorted by modification time, with the newest files at the bottom.  
 - `df -h`
             <img width="1920" height="406" alt="image" src="https://github.com/user-attachments/assets/5b991c2d-7e43-4722-85f6-47478197c95b" />
 
