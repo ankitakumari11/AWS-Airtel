@@ -100,4 +100,88 @@ bucket policy:
 
 # EBS (ELASTIC BLOCK STORAGE)  
 
+- Aws ebs = elastic block storage
+- high performance block storage for ec2
+- persistent , scalable and reliable
+- supports snapshots and encryption
+- It is a block storage service used with amazon ec2 instances. EBS volumes are persistent and continue to exit independently even after an instance is stopped or terminated.
+
+**EBS VOLUME TYPES**
+- gp3 : balanced performances and cost, it is advance version of gp2.
+- Io2
+- stl
+- scl
+- EBS offers multiple volume types based on performance and cost. GP3 is a general-pirpose ssd used in most wrokloads. Io2 is ideal for high performance applications like databased. St1 and sc1 are HDD-based and suited for large volumes of infrequenctly accessed data.
+
+**Features of EBS**:
+
+- Durability
+- Snapshots
+- Encryption
+- Attach/detach
+- Resize
+- EBS
+- EBS volumes are highly durable and can be spanshotted for backup and disaster recovery. Encryption is available at rest and in transit. You can also change volume configuration on the fly with minimal or no downtime.
+
+**Common use**
+- Running databases (my sql)
+- hosting containers and applications
+- storing logs , cache and swap files.
+- high - speed transactional workloads.
+
+**Summary and best practice**
+- Choose the right volume type based on workload
+- use snapshots regularly for backups
+- emable encryption for secuirty
+- monitor using cloudwatch
+- consider i02 for mission-critical apps
+
+> [!NOTE]
+> - ebs volume and instance should be in same AZ.
+> - *To summarize, ebs is a powerful storage solution for ec2. Select the right volume type for performance and cost baalance. Dont forget to setup snapshots and monitor performance using cloudwatch.For critical workloads , use io2 volumes with high durability and performance.*
+> - - *ssd has more speed and more capacity as compare to hdd*
+
+**HANDS-ON EBS**
+
+1. Create an instance and see the Avalaibility zone of the server
+2. Go to volumes and Create volume. Here select the same zone in which the ec2 is there and keep everything default i.e gp3.
+           <img width="1897" height="966" alt="image" src="https://github.com/user-attachments/assets/a2770630-6094-459c-a1a5-aa9bbe3a900f" />
+3. Here u will see that maybe some volumes present already , those are create by default whenevr we create a new instance so it is attached to that instance.
+4. Volume which u created:
+           <img width="1915" height="848" alt="image" src="https://github.com/user-attachments/assets/f710c6ad-94fa-4684-a631-294cf127ac5e" />
+5. Go to actions now on the volume -> attach
+           <img width="1902" height="949" alt="image" src="https://github.com/user-attachments/assets/d94c47b3-41e4-45d7-a10b-182b89743326" />
+
+   *here /dev/sdb is*
+6. Now u can see on the server , a new volume is attached :
+           <img width="1886" height="314" alt="image" src="https://github.com/user-attachments/assets/697d728a-6d00-4f9f-a621-87ae709122ee" />
+7. Mounting the volume
+- `sudo fdisk -l`
+            <img width="1920" height="720" alt="image" src="https://github.com/user-attachments/assets/380f5f98-11f3-421e-8593-70375a595c75" />
+
+  <img width="1070" height="587" alt="image" src="https://github.com/user-attachments/assets/3cdba0c5-16a1-4f17-9e9c-f7757de0b994" />
+
+- `file -s /dev/xvdg`
+            <img width="1917" height="91" alt="image" src="https://github.com/user-attachments/assets/8895341a-5aee-43e1-9ef0-47553a943981" />
+- `mkfs -t xfs /dev/xvdg`
+            <img width="1917" height="309" alt="image" src="https://github.com/user-attachments/assets/84550784-3c9a-4164-9301-afe245ba5af4" />
+- `file -s /dev/xvdg`
+            <img width="1920" height="82" alt="image" src="https://github.com/user-attachments/assets/bc2d16b1-c849-4912-9779-9abee12a23d7" />
+- `mkdir /myebsvol`
+- `mount /dev/xvdg /myebsvol`
+            <img width="1920" height="369" alt="image" src="https://github.com/user-attachments/assets/31896909-ee86-43e3-aca9-5d3d0144802e" />
+- `ls -lart /myebsvol/`
+- `df -h`
+            <img width="1920" height="406" alt="image" src="https://github.com/user-attachments/assets/5b991c2d-7e43-4722-85f6-47478197c95b" />
+
+
+
+
+
+
+  
+  
+
+
+
 
