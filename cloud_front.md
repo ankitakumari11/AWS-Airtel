@@ -50,7 +50,9 @@ Now you will be able to see the site:
 
 <img width="1920" height="202" alt="image" src="https://github.com/user-attachments/assets/139fc74b-3a7f-42f6-912a-7cb59a54355d" />
 
+Here u didnt need to create origin becoz it will already create by default when u will create distribution
 
+![Uploading image.png…]()
 
 
 
