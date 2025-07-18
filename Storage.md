@@ -78,9 +78,8 @@ GO TO bucket ->your bucket -> permissions ->bucket policy -> edit bucket policy 
 1. Again create a bucket : "ankita-airtel2"  
 2. go to your bucket -> properties - > go to end ->edit static website hosting -> enable -> (hosting type)->host a static website ->(index document) ->index.html.  
 3. Go to your bucket , upload index.html  
-4. Go to permissions ->(Block public access (bucket settings)) ->off ->bucket policy->add below policy  
+4. Go to permissions ->(Block public access (bucket settings)) ->off ->bucket policy->add below policy  -> (here in the below policy replace this "ankita-airtel2" with your bucket name.  
 ```
-bucket policy:
 {
     "Version": "2012-10-17",
     "Statement": [
