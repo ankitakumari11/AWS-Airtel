@@ -1,3 +1,11 @@
+## S3
+
+1. Create S3 bucket
+2. Host the website on s3 bucket using index.html and then remove public access.
+3. So now u will not be able to access the website as public access is disable so we will access it using cloud front.
+
+
+## CLOUD FRONT:  
 1. Go to cloud front -> security -> origin access
 2. create OAC with S3 access and "Always" signing  
 <img width="1920" height="958" alt="image" src="https://github.com/user-attachments/assets/55c7c90f-450d-44a7-8421-1a7c035b38f9" />
@@ -20,6 +28,30 @@
 <img width="1920" height="942" alt="image" src="https://github.com/user-attachments/assets/c9413992-db9c-4559-ab4c-b2fa8fe897a8" />
 
 <img width="1920" height="411" alt="image" src="https://github.com/user-attachments/assets/8cc7c014-dbf3-42eb-abd1-7aa750b5c31c" />
+
+
+Now go to your cloudfront distribution:
+
+  <img width="1911" height="920" alt="image" src="https://github.com/user-attachments/assets/716c29aa-6ee6-4fed-9b4f-9fcbca265949" />
+
+Go to default root object:
+
+<img width="1920" height="916" alt="image" src="https://github.com/user-attachments/assets/4322a460-2caf-4e28-b1ce-78be61915b58" />
+
+Go down and write index.html
+
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/9dbfc36e-5c0f-4fc3-8eb9-2f1f3cae9dce" />
+
+Now copy the distribution domain name and paste in browser:
+
+<img width="1920" height="737" alt="image" src="https://github.com/user-attachments/assets/b111e395-e74f-4928-abb0-a2c985949bb2" />
+
+Now you will be able to see the site:
+
+<img width="1920" height="202" alt="image" src="https://github.com/user-attachments/assets/139fc74b-3a7f-42f6-912a-7cb59a54355d" />
+
+
+
 
 
 
