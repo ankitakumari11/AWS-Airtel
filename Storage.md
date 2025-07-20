@@ -103,30 +103,30 @@ GO TO bucket ->your bucket -> permissions ->bucket policy -> edit bucket policy 
 - high performance block storage for ec2
 - persistent , scalable and reliable
 - supports snapshots and encryption
-- It is a block storage service used with amazon ec2 instances. EBS volumes are persistent and continue to exit independently even after an instance is stopped or terminated.
+- *It is a block storage service used with amazon ec2 instances. EBS volumes are persistent and continue to exist independently even after an instance is stopped or terminated.*
 
 **EBS VOLUME TYPES**
-- gp3 : balanced performances and cost, it is advance version of gp2.
-- Io2
-- stl
-- scl
-- EBS offers multiple volume types based on performance and cost. GP3 is a general-pirpose ssd used in most wrokloads. Io2 is ideal for high performance applications like databased. St1 and sc1 are HDD-based and suited for large volumes of infrequenctly accessed data.
+- gp3 (General purpose SSD) : balanced performances and cost, it is advance version of gp2.
+- Io2 Block express : High -Performance for IOP-intensive workloads.
+- stl (Throughput HDD) : Big data , log processing.
+- scl (Cold HDD) : Infrequent access , lowest cost.
+- *EBS offers multiple volume types based on performance and cost. GP3 is a general-pirpose ssd used in most wrokloads. Io2 is ideal for high performance applications like databased. St1 and sc1 are HDD-based and suited for large volumes of infrequenctly accessed data.*
 
 **Features of EBS**:
 
-- Durability
-- Snapshots
-- Encryption
-- Attach/detach
-- Resize
-- EBS
-- EBS volumes are highly durable and can be spanshotted for backup and disaster recovery. Encryption is available at rest and in transit. You can also change volume configuration on the fly with minimal or no downtime.
+- Durability : For web apps , backups , and big data.
+- Snapshots : For high perfromance storage attached to EC2.
+- Encryption : For shared access and file-based workloads.
+- Attach/detach : For long-term , low-cost archiving.
+- Resize : For backup automation and compliance
+- *EBS volumes are highly durable and can be spanshotted for backup and disaster recovery. Encryption is available at rest and in transit. You can also change volume configuration on the fly with minimal or no downtime.*
 
 **Common use**
-- Running databases (my sql)
+- Running databases (mysql , PostgresSQL , Oracle)
 - hosting containers and applications
 - storing logs , cache and swap files.
 - high - speed transactional workloads.
+- *EBS is used in various workloads that need low-latency, consistent performance. It's perfect for databases,container storage, and file systems. Since it supports high IOPS , it suits transactional apps and real-time processing.*
 
 **Summary and best practice**
 - Choose the right volume type based on workload
@@ -134,6 +134,7 @@ GO TO bucket ->your bucket -> permissions ->bucket policy -> edit bucket policy 
 - emable encryption for secuirty
 - monitor using cloudwatch
 - consider i02 for mission-critical apps
+- *To summarize, EBS is a powerful storage solution for EC2 , select the right volume type for performance and cost balance. Don't forget to setup snapshots and monitor performance using CloudWatch. For critical workloads , use io2 volumes with high durability and performance.*
 
 > [!NOTE]
 > - ebs volume and instance should be in same AZ.
