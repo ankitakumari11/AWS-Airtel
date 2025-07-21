@@ -133,3 +133,33 @@ File size: 1024 bytes
 
 **🎉 Done! You just built your first event-driven Lambda function!**
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  
+### ✅ Why You See Output in CloudWatch (Even Without Mentioning It in lambda code)  
+🔹 1. Automatic Logging  
+- Every AWS Lambda function automatically sends:
+  - print() output
+  - Exceptions
+  - Errors  
+→ to Amazon CloudWatch Logs, without any additional setup.
+
+🔹 2. IAM Role with Logging Permissions  
+- When you create a Lambda function, AWS creates or attaches an IAM execution role that includes permissions like:
+```
+{
+  "Effect": "Allow",
+  "Action": [
+    "logs:CreateLogGroup",
+    "logs:CreateLogStream",
+    "logs:PutLogEvents"
+  ],
+  "Resource": "*"
+}
+```
+- These permissions allow Lambda to:
+  - Create a log group /aws/lambda/<function-name>
+  - Write logs from print() or exceptions
+
+🔹 3. Behind the Scenes
+- When you do: `print("Something happened")`
+- Lambda sends this to: `CloudWatch → Log Group: /aws/lambda/s3-upload-logger → Log Stream: <timestamp>`
