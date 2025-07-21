@@ -1,3 +1,49 @@
+# 🎯 Motive (Goal) of This Lab
+- You wanted to host a static website (e.g., index.html) on S3 securely, by:
+  - Preventing direct public access to the S3 bucket
+  - Using CloudFront (CDN) to securely deliver the content worldwide
+  - Enabling fast, scalable, and secure web hosting
+
+✅ What You Did and Why
+🔹 1. Created an S3 Bucket
+- You uploaded your website files (like index.html) to an S3 bucket.
+- Enabled static website hosting feature (to serve HTML directly).
+- But you disabled public access to make the bucket private, which is more secure.
+- ⛔ Without public access, no one (not even you via browser) can view the site directly from the S3 URL.
+
+🔹 2. Created CloudFront Distribution
+- You created a CloudFront Distribution with:
+  - Origin = your S3 bucket
+  - It acts as a secure frontend for your S3 content
+  - CloudFront delivers content through its global edge locations for speed
+
+🔹 3. Set Up Origin Access Control (OAC)
+- Because your S3 bucket is private, CloudFront needs permission to access it.
+- So you:
+  - Went to CloudFront → Security → Origin Access
+  - Created an Origin Access Control (OAC) that:
+    - Grants CloudFront read-only access to your private S3
+    - Ensures all access is signed and verified
+- This replaces the old "OAI" method. OAC is more modern and flexible.
+
+🔹 4. Configured Root Object
+- You set the Default Root Object to index.html so:
+  - When someone accesses https://your-cloudfront-id.cloudfront.net/
+  - CloudFront automatically serves index.html
+- Without this, users would get an error unless they specify the full path (/index.html).
+
+🔹 5. Accessed the Site via CloudFront
+- Finally, you:
+  - Copied the CloudFront domain name (e.g., d1234abcd.cloudfront.net)
+  - Opened it in a browser
+- 🎉 And your static website loaded — served securely and globally via CloudFront, even though your S3 bucket is private!
+
+🔐 Key Security Benefit
+- S3 is 100% private — no public access
+- CloudFront is the only allowed access point to S3
+- Users access content only through CloudFront
+- This setup is secure and performance-optimized
+  
 ## S3
 
 1. Create S3 bucket
