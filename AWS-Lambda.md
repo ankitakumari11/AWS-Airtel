@@ -135,7 +135,7 @@ File size: 1024 bytes
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
   
-### ✅ Why You See Output in CloudWatch (Even Without Mentioning It in lambda code)  
+## ✅ Why You See Output in CloudWatch (Even Without Mentioning It in lambda code)  
 🔹 1. Automatic Logging  
 - Every AWS Lambda function automatically sends:
   - print() output
