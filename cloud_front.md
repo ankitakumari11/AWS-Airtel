@@ -4,7 +4,7 @@
   - Using CloudFront (CDN) to securely deliver the content worldwide
   - Enabling fast, scalable, and secure web hosting
 
-✅ What You Did and Why
+✅ What You Did and Why  
 🔹 1. Created an S3 Bucket
 - You uploaded your website files (like index.html) to an S3 bucket.
 - Enabled static website hosting feature (to serve HTML directly).
