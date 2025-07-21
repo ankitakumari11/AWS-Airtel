@@ -17,5 +17,20 @@ echo "Welcome to ec2" > /var/www/html/index.html
 5. Go to cloudwtach on aws -> metric ->all metrics -> browse -> ec2 -> per instance metrics -> select instance
                           <img width="1918" height="941" alt="image" src="https://github.com/user-attachments/assets/0ff95d48-edf5-4bc3-b73d-1294547a4969" />
 
-6. Cloud watch alarm: 
+6. **CLOUD WATCH ALARMS**
+   - Cloudwatch -> Alarms -> create Alarm
+   - Select ec2 -> CPU Utilisation
+   - Set threshold : > 60% for 5 mins
+   - Add SNS notification for alerts
+
+7. **CREATE DASHBOARDS**
+   - Cloudwatch -> dashboards ->create
+   - Add graphs for CPU , Network , Disk
+   - Arrange widgets and save
+
+8. **SEND LOGS TO CLOUDWATCH** (Optional)
+   - Install awslogs on ec2
+   - sudo yum install awslogs
+   - Configure /etc/awslogs/awslogs.conf
+   - Start and enable awslogsd service
 
