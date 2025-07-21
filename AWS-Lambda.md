@@ -14,9 +14,10 @@
 ✅ Step 2: Create a Lambda Function  
 - Go to Lambda in the AWS Console.
 - Click Create function.
-- Choose:Author from scratch
-- Function name: s3-upload-logger
-- Runtime: Python 3.12 (or Node.js if you prefer)
+- Choose:
+  - Author from scratch
+  - Function name: s3-upload-logger
+  - Runtime: Python 3.12 (or Node.js if you prefer)
 - Click Create function.
 
 ✅ Step 3: Add Code to Lambda
