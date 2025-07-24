@@ -74,4 +74,8 @@ sudo systemctl status mysql
 
      <img width="1913" height="787" alt="image" src="https://github.com/user-attachments/assets/f260c1a9-82c2-49f3-a8bc-e6df9fb24643" />
 
-6.
+6. run below command on your server:
+```
+mysql -h <endpoint> -P 3306 -u admin -p {here write your endpoint}
+mysql -h database-1.cczawg2yku4m.us-east-1.rds.amazonaws.com -P 3306 -u admin -p
+```
