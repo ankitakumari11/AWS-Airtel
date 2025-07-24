@@ -79,3 +79,44 @@ sudo systemctl status mysql
 mysql -h <endpoint> -P 3306 -u admin -p {here write your endpoint}
 mysql -h database-1.cczawg2yku4m.us-east-1.rds.amazonaws.com -P 3306 -u admin -p
 ```
+
+7. Now it will ask for password so go to : aws secret manager -> secret -> secret/value -> create - > copy the password and paste on server
+
+    <img width="1918" height="995" alt="image" src="https://github.com/user-attachments/assets/738e7bab-e6a2-4adf-bf48-94a2e94a1478" />
+
+8. Now u r inside mysql:
+
+    <img width="1901" height="417" alt="image" src="https://github.com/user-attachments/assets/c8661ab9-d053-40ee-93bc-6602c18160aa" />
+
+9.  Now create table and database:
+```
+mysql> CREATE DATABASE ankita_db;
+mysql> use ankita_db
+Database changed
+mysql> CREATE TABLE ank_table (
+    ->   id INT,
+    ->   name VARCHAR(50)
+    -> );
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> INSERT INTO ank_table VALUES (1,'Ankita');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> INSERT INTO ank_table VALUES (2,'Kumari');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> SELECT * FROM ank_table;
++------+--------+
+| id   | name   |
++------+--------+
+|    1 | Ankita |
+|    2 | Kumari |
++------+--------+
+2 rows in set (0.01 sec)
+
+mysql>
+```
+
+   <img width="1910" height="269" alt="image" src="https://github.com/user-attachments/assets/e138e1b4-48ce-449b-8638-f8a144342349" />
+
+10. 
